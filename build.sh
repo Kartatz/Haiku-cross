@@ -130,7 +130,7 @@ rm --force --recursive ./*
 	--prefix="${toolchain_directory}" \
 	--enable-gold \
 	--enable-ld \
-	--enable-largefile='yes') \
+	--enable-largefile='yes' \
 	--disable-libtool-lock \
 	--disable-nls \
 	--enable-plugins \
