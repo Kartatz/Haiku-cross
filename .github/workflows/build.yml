@@ -12,6 +12,10 @@ jobs:
     - uses: actions/checkout@main
       with:
         submodules: true
+    - name: Install build dependencies
+      run: |
+        sudo apt update
+        sudo apt install --assume-yes nasm
     - name: Run build script
       run: bash ./build.sh
     - name: Upload artifact
