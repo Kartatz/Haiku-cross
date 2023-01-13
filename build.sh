@@ -72,6 +72,8 @@ cd "${haiku_directory}"
 
 declare -r package="$(realpath './generated/objects/linux/x86_64/release/tools/package/package')"
 
+mkdir "${triple}"
+
 "${package}" extract -C "${triple}" './generated/objects/haiku/x86_64/packaging/packages/haiku.hpkg'
 "${package}" extract -C "${triple}" './generated/objects/haiku/x86_64/packaging/packages/haiku_devel.hpkg'
 find './generated/download' -name '*.hpkg' -exec "${package}" extract -C "${triple}" {} \;
